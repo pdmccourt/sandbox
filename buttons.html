@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html> 
+
+<header>
+    <title> DOM 1 </title>
+
+<style>
+
+</style>
+
+</header>
+
+
+<body> 
+    <p>Button Interaction</p>
+
+    <button onclick = "button1Selected()";
+    class = "js-interactive-button1";
+    >
+    Button 1 not Selected
+    </button>
+
+    <button onclick = "button2Selected()";
+    class = "js-interactive-button2";
+    >
+    Button 2 not Selected
+    </button>
+
+    <p class = "js-button1Statement">
+    </p>
+    <p class = "js-button2Statement">
+    </p>
+
+
+<script>
+let button1Count = 0;
+let button2Count = 0;
+
+
+
+function button1Selected() {
+    const buttonElement = document.querySelector('.js-interactive-button1');
+    //don't forget it's .js here
+    
+    if (buttonElement.innerText === 'Button 1 not Selected') {
+        buttonElement.innerHTML = 'Button 1 Selected';
+        button1Count +=1;
+        document.querySelector('.js-button1Statement').innerHTML = "Button 1 Count = " + button1Count;
+        //select the first element within the document that matches the specified CSS selector
+        //innerHTML is the text of the element (js-button1Statement)
+    }
+    else {
+        buttonElement.innerHTML = 'Button 1 not Selected';
+    }
+}
+function button2Selected() {
+    const buttonElement = document.querySelector('.js-interactive-button2');
+    //don't forget it's .js here
+    
+    if (buttonElement.innerText === 'Button 2 not Selected') {
+        buttonElement.innerHTML = 'Button 2 Selected';
+        button2Count +=1;
+        document.querySelector('.js-button2Statement').innerHTML = "Button 2 Count = " + button2Count;
+    }
+    else {
+        buttonElement.innerHTML = 'Button 2 not Selected';
+    }
+}
+
+</script>
+
+
+
+</body>
+
+
+</html>
