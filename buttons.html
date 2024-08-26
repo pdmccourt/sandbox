@@ -6,7 +6,17 @@
     <title> JS Sandbox-1 </title>
 
 <style>
-
+.button-style-1 {
+    border: none;
+    background-color: green;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+}
 </style>
 
 </header>
@@ -16,13 +26,13 @@
     <p>Button Interaction</p>
 
     <button onclick = "button1Selected()";
-    class = "js-interactive-button1";
+    class = "js-interactive-button1 button-style-1";
     >
     Button 1 not Selected
     </button>
 
     <button onclick = "button2Selected()";
-    class = "js-interactive-button2";
+    class = "js-interactive-button2 button-style-1";
     >
     Button 2 not Selected
     </button>
@@ -31,6 +41,7 @@
     </p>
     <p class = "js-button2Statement">
     </p>
+    <p>...</p>
 
 
 
@@ -39,7 +50,8 @@
     class = "js-inputNumber" 
     onkeydown = "handleKeydown(event)">
 
-    <button onclick = "squareAction()">square</button>
+    <button onclick = "squareAction()";
+    class = "button-style-1">square</button>
 
     <p class = "js-answer"></p>
 
@@ -57,7 +69,7 @@ function handleKeydown(event) {
 function squareAction () {
     const inputElement = document.querySelector('.js-inputNumber');
     const inputValue = Number(inputElement.value);
-    // so it's not a string
+    // convert string to a number
     let squareNumber = (inputValue * inputValue);
     document.querySelector('.js-answer').innerHTML = squareNumber;
 }
