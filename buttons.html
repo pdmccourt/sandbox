@@ -6,9 +6,9 @@
     <title> JS Sandbox-1 </title>
 
 <style>
-.button-style-1 {
+.button-style-unselected {
     border: none;
-    background-color: green;
+    background-color: gray;
     color: white;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -17,6 +17,9 @@
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
+}
+.button-style-selected {
+background-color: green;
 }
 </style>
 
@@ -27,13 +30,13 @@
     <p>Button Interaction</p>
 
     <button onclick = "button1Selected()";
-    class = "js-interactive-button1 button-style-1";
+    class = "js-interactive-button1 button-style-unselected";
     >
     Button 1 not Selected
     </button>
 
     <button onclick = "button2Selected()";
-    class = "js-interactive-button2 button-style-1";
+    class = "js-interactive-button2 button-style-unselected";
     >
     Button 2 not Selected
     </button>
@@ -52,7 +55,7 @@
     onkeydown = "handleKeydown(event)">
 
     <button onclick = "squareAction()";
-    class = "button-style-1">square</button>
+    class = "button-style-unselected">square</button>
 
     <p class = "js-answer"></p>
 
@@ -81,6 +84,7 @@ function button1Selected() {
     
     if (buttonElement.innerText === 'Button 1 not Selected') {
         buttonElement.innerHTML = 'Button 1 Selected';
+        buttonElement.classList.add('button-style-selected');
         button1Count +=1;
         document.querySelector('.js-button1Statement').innerHTML = "Button 1 Count = " + button1Count;
         //select the first element within the document that matches the specified CSS selector
@@ -88,6 +92,7 @@ function button1Selected() {
     }
     else {
         buttonElement.innerHTML = 'Button 1 not Selected';
+        buttonElement.classList.remove('button-style-selected');
     }
 }
 function button2Selected() {
@@ -96,11 +101,15 @@ function button2Selected() {
     
     if (buttonElement.innerText === 'Button 2 not Selected') {
         buttonElement.innerHTML = 'Button 2 Selected';
+        
+        buttonElement.classList.add('button-style-selected');
         button2Count +=1;
         document.querySelector('.js-button2Statement').innerHTML = "Button 2 Count = " + button2Count;
     }
     else {
         buttonElement.innerHTML = 'Button 2 not Selected';
+        buttonElement.classList.remove('button-style-selected');
+        console.log("kkkkkkk");
     }
 }
 
