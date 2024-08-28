@@ -1,0 +1,34 @@
+body {
+    font-family: Arial;
+    /* will apply to whole page */
+    background-color:aliceblue;
+}
+
+.button-style-unselected {
+border: none;
+background-color: gray;
+color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 15px;
+padding-right: 15px;
+font-weight: bold;
+border-radius: 15px;
+cursor: pointer;
+margin-bottom: 30px; /* space under button */   
+}
+.button-style-selected {
+background-color: green;
+}
+
+.inputNumbers {
+font-size: 15px;
+padding: 10px;
+/* padding will apply to top, bottom, L and R */
+}
+
+.size-icon {
+height: 40px;  
+cursor: pointer;
+
+}

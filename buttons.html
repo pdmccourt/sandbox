@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html> 
+
+<header>
+    <title> JS Sandbox-1 </title>
+
+<link rel = "stylesheet"
+href = "styles/buttons-styles.css">
+
+</header>
+
+
+<body> 
+    <p>Button Interaction</p>
+
+    <button onclick = "button1Selected()";
+    class = "js-interactive-button1 button-style-unselected";
+    >
+    Button 1 not Selected
+    </button>
+
+    <button onclick = "button2Selected()";
+    class = "js-interactive-button2 button-style-unselected";
+    >
+    Button 2 not Selected
+    </button>
+
+    <p class = "js-button1Statement">
+    </p>
+    <p class = "js-button2Statement">
+    </p>
+    
+
+    <p>Square a number</p>
+    <input placeholder = "number to square"
+    class = "js-inputNumber inputNumbers" 
+    onkeydown = "handleKeydown1(event)">
+
+    <button onclick = "squareAction()";
+    class = "button-style-unselected">square</button>
+
+    <p class = "js-answer"></p>
+
+        <p>L per 100km to mpg</p>
+        <input placeholder = "L / 100km"
+        class = "js-inputL100 inputNumbers"
+        onkeydown = "handleKeydown2(event)">
+        <button onclick = "calculateMPG()";>
+
+            
+        <img src = "images/go-emoji-2.jpeg" class = "size-icon">
+        </button>
+
+        <p class = "js-mpg"></p>
+
+<script src = "scripts.js">
+    
+</script>
+
+
+
+</body>
+
+
+</html>
